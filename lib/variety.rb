@@ -3,7 +3,7 @@ require 'sinatra'
 module Variety
   class App < Sinatra::Base
     set :static, true
-    set :public, File.dirname(__FILE__) + '/public'
+    set :public, File.expand_path('../../public', __FILE__)
     
     get '/' do
       File.read File.expand_path('../../public/index.html', __FILE__)
