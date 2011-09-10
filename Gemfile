@@ -1,7 +1,9 @@
-source "http://rubygems.org"
+source :rubygems
 
-# Pull in Celluloid via git
-gem 'celluloid', :git => 'git://github.com/tarcieri/celluloid.git'
+gem 'cramp'
 
-# Specify your gem's dependencies in variety.gemspec
-gemspec
+gem 'thin'
+gem 'http_router'
+gem 'async-rack'
+gem 'json'
+gem 'celluloid'

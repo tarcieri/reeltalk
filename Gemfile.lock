@@ -1,40 +1,37 @@
-GIT
-  remote: git://github.com/tarcieri/celluloid.git
-  revision: c5a7d9ad784ba33994521266241c85a4e689896c
-  specs:
-    celluloid (0.0.1)
-      celluloid
-
-PATH
-  remote: .
-  specs:
-    variety (0.0.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
-    diff-lcs (1.1.2)
-    git (1.2.5)
-    jeweler (1.5.2)
-      bundler (~> 1.0.0)
-      git (>= 1.2.5)
-      rake
-    rake (0.8.7)
-    rspec (2.3.0)
-      rspec-core (~> 2.3.0)
-      rspec-expectations (~> 2.3.0)
-      rspec-mocks (~> 2.3.0)
-    rspec-core (2.3.1)
-    rspec-expectations (2.3.0)
-      diff-lcs (~> 1.1.2)
-    rspec-mocks (2.3.0)
+    activesupport (3.0.10)
+    async-rack (0.5.1)
+      rack (~> 1.1)
+    celluloid (0.2.1)
+    cramp (0.15.1)
+      activesupport (~> 3.0.9)
+      eventmachine (~> 1.0.0.beta.3)
+      rack (~> 1.3.2)
+      thor (~> 0.14.6)
+    daemons (1.1.4)
+    eventmachine (1.0.0.beta.3)
+    http_router (0.10.2)
+      rack (>= 1.0.0)
+      url_mount (~> 0.2.1)
+    json (1.5.4)
+    rack (1.3.2)
+    thin (1.2.11)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+    thor (0.14.6)
+    url_mount (0.2.1)
+      rack
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0.0)
-  celluloid!
-  jeweler (~> 1.5.2)
-  rspec (~> 2.3.0)
-  variety!
+  async-rack
+  celluloid
+  cramp
+  http_router
+  json
+  thin
