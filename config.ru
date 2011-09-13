@@ -8,7 +8,8 @@ if Variety::Application.env == 'development'
   use Rack::Reloader, 0
   
   # Serve assets from /public
-  use Rack::Static, :urls => ["/images", "/stylesheets"], :root => Variety::Application.root(:public)
+  use Rack::Static, :urls => %w(/javascripts /images /stylesheets),
+                    :root => Variety::Application.root(:public)
 end
 
 # Running thin :
