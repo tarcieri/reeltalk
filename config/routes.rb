@@ -2,5 +2,6 @@
 HttpRouter.new do
   add('/').to(HomeAction)
   get('/users').to(UsersAction)
+  get('/history').to(HistoryAction)
   get('/websocket').to(ChatClient)
 end
