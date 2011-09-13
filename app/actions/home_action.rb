@@ -1,8 +1,6 @@
 class HomeAction < Cramp::Action
-  @@template = ERB.new File.read(Variety::Application.root('app/views/index.erb'))
-
   def start
-    render @@template.result(binding)
+    render File.read(Variety::Application.root('public/index.html'))
     finish
   end
 end
