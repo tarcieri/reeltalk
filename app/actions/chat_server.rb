@@ -12,16 +12,16 @@ class ChatServer
   end
     
   def initialize
-    @clients = {}
+    @users = {}
   end
   
   def register(name, client)
-    @clients[name] = client
+    @users[name] = client
     publish :control, name, 'joined the chat room'
   end
   
   def unregister(name)
-    @clients.delete name
+    @users.delete name
     publish :control, name, 'left the chat room'
   end
   
@@ -29,11 +29,15 @@ class ChatServer
     publish :message, user, str
   end
   
+  def users
+    @users.map { |name, _| {:name => name} }
+  end
+  
   def publish(type, user, str)
     msg = {:action => type, :user => user, :message => str}.to_json
     
-    @clients.each do |_, client|
-      client.send_message msg
+    @users.each do |_, user|
+      user.send_message msg
     end
   end
 end
