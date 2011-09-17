@@ -1,19 +1,11 @@
 class ChatClient < Cramp::Websocket
   attr_reader :name
   
-  on_start  :init_channel
   on_data   :handle_data
   on_finish :handle_leave
-  
-  def init_channel
-    # Channels are a thread-safe way to send messages to the event loop
-    @channel = EM::Channel.new
-    @sub = @channel.subscribe { |msg| render msg }
-  end
     
   def handle_data(data)
     msg = JSON.parse data
-    p msg
     
     case msg['action']
     when 'join'    then handle_join(msg)
@@ -36,6 +28,6 @@ class ChatClient < Cramp::Websocket
   end
   
   def send_message(msg)
-    @channel.push msg
+    EM.schedule { render msg }
   end
 end
