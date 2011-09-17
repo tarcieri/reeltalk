@@ -28,6 +28,6 @@ class ChatClient < Cramp::Websocket
   end
   
   def send_message(msg)
-    EM.schedule { render msg }
+    render msg
   end
 end
