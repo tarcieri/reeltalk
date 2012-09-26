@@ -1,9 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'cramp'
-
-gem 'thin'
-gem 'http_router'
-gem 'async-rack'
-gem 'json'
-gem 'celluloid'
+# Specify your gem's dependencies in reeltalk.gemspec
+gemspec
