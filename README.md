@@ -1,7 +1,6 @@
 reeltalk
 ========
 [![Build Status](https://secure.travis-ci.org/tarcieri/reeltalk.png?branch=master)](http://travis-ci.org/tarcieri/reeltalk)
-[![Dependency Status](https://gemnasium.com/tarcieri/reeltalk.png)](https://gemnasium.com/tarcieri/reeltalk)
 
 An underdocumented web chat system
 
