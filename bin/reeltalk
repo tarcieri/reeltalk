@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'reeltalk'
+
+Reeltalk::Server.supervise_as :reel
+sleep
