@@ -13,6 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/tarcieri/reeltalk"
 
   gem.add_runtime_dependency 'reel'
+  gem.add_runtime_dependency 'json'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'

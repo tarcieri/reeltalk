@@ -24,7 +24,7 @@ $(document).ready(function(){
     var host = window.location.host.split(':')[0];
 
     var SocketKlass = "MozWebSocket" in window ? MozWebSocket : WebSocket;
-    var ws = new SocketKlass('ws://' + window.location.host + '/websocket');
+    var ws = new SocketKlass('ws://' + window.location.host + '/chat');
 
     var container = $('div#msgs');
     ws.onmessage = function(evt) {
