@@ -1,13 +1,23 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
-<script src='http://jquery-json.googlecode.com/files/jquery.json-2.2.min.js'></script>
-<script src='http://datejs.googlecode.com/svn/trunk/build/date.js'></script>
-<script src='/javascripts/chat.js'></script>
- <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/style.css" />
+  <meta charset="utf-8">
+  <title>Reeltalk!</title>
+  <meta name="description" content="Reel and Celluloid::IO-powered chat">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="http://jquery-json.googlecode.com/files/jquery.json-2.2.min.js"></script>
+  <script src="http://datejs.googlecode.com/svn/trunk/build/date.js"></script>
+  <script src="/javascripts/chat.js"></script>
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/style.css" />
+  <link href="/images/icon.png" rel="shortcut icon" />
 </head>
 <body>
-  <img src="/images/logo.png" alt="Variety" />
+  <div class="navbar">
+    <img src="/images/logo.png" alt="" /> Reeltalk!
+  </div>
+
   <div id="error" class="bordered" style="display: none;">
     This browser has no native WebSocket support.<br/>
     Use a WebKit nightly or Google Chrome. 
