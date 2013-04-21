@@ -20,7 +20,7 @@
 }
 
 .main {
-  position: absolute;
+  position: relative;
   top: 45px;
   bottom: 0;
   padding: 10px;
@@ -45,8 +45,7 @@
   -webkit-border-radius: 10px;
 }
 #channel {
-  margin-top: 100px;
-  height: 480px;
+  height: 90%;
   position: relative;
 }
 div#msgs {
