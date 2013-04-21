@@ -51,6 +51,8 @@
 div#msgs {
   overflow-y: scroll;
   height: 400px;
+  font-size: 20px;
+  line-height: 24px;
 }
 div#msgs ul {
   list-style: none;
