@@ -52,7 +52,6 @@ div#msgs {
   overflow-y: scroll;
   height: 400px;
   font-size: 20px;
-  line-height: 24px;
 }
 div#msgs ul {
   list-style: none;
@@ -61,13 +60,13 @@ div#msgs ul {
   text-align: left;
 }
 div#msgs li {
-  line-height: 20px;
+  line-height: 24px;
 }
 div#msgs li span.user {
-  color: #ff9900;
+  color: #838383;
 }
 div#msgs li span.user.self {
-  color: #aa2211;
+  color: #5c8eff;
 }
 div#msgs li span.time {
   float: right;
