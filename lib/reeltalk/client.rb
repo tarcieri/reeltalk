@@ -21,7 +21,7 @@ module Reeltalk
         dispatch message
       end
     rescue EOFError
-      info "#{nickname} disconnected"
+      event 'left'
       terminate
     end
 
@@ -31,8 +31,7 @@ module Reeltalk
       case message['action']
       when 'join'
         @nickname = message['user']
-        info "#{nickname} joined"
-        publish 'chat', message
+        event 'joined'
       when 'message'
         publish 'chat', message.merge('user' => @nickname)
       else
@@ -46,6 +45,11 @@ module Reeltalk
 
     def nickname
       @nickname || "unregistered user"
+    end
+
+    def event(message)
+      info "#{@nickname} #{message}"
+      publish 'chat', {'action' => 'control', 'user' => @nickname, 'message' => message}
     end
   end
 end
