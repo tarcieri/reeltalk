@@ -21,7 +21,7 @@ module Reeltalk
         dispatch message
       end
     rescue EOFError
-      event 'left'
+      event "left"
       terminate
     end
 
@@ -33,7 +33,7 @@ module Reeltalk
         @nickname = message['user']
         event 'joined'
       when 'message'
-        publish 'chat', message.merge('user' => @nickname)
+        publish 'chat', message.merge('user' => nickname)
       else
         warn "unknown command '#{action}'"
       end
@@ -48,8 +48,8 @@ module Reeltalk
     end
 
     def event(message)
-      info "#{@nickname} #{message}"
-      publish 'chat', {'action' => 'control', 'user' => @nickname, 'message' => message}
+      info "#{nickname} #{message}"
+      publish 'chat', {'action' => 'control', 'user' => nickname, 'message' => message}
     end
   end
 end
